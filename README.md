@@ -32,3 +32,11 @@ A simple sliding menu used on the main [We Make Awesome Sh site](http://wemakeaw
     <div id='content'>
       <!-- Insert your content here -->
     </div>
+
+### Polyfill for SVG filters
+
+    <script>  
+        var polyfilter_scriptpath = '/css-filters/';  
+    </script>
+    <script src="/css-filters/cssParser.js"></script>
+    <script src="/css-filters/css-filters-polyfill.js"></script>
