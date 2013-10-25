@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("../fonts/BebasNeue-webfont.eot");
+  src: url("../fonts/BebasNeue-webfont.eot?iefix") format("eot"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#webfontfvFLBU0N") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'BebasNeueRegular', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+body {
+  background: #fff;
+  color: #1a1a1a;
+  padding: 0;
+}
+
+.sliding-menu {
+  background: #1a1a1a;
+  background: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  font-family: 'BebasNeueRegular', sans-serif;
+  font-weight: normal;
+  left: -100%;
+  margin-right: -248px;
+  padding: 24px;
+  position: fixed;
+  right: 100%;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 999;
+}
+.sliding-menu a {
+  color: #fff;
+}
+.sliding-menu a:hover {
+  color: #555;
+}
+.sliding-menu .block {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+.sliding-menu .block:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.sliding-menu-hidden {
+  bottom: 0;
+  color: #fff;
+  left: 248px;
+  padding: 24px;
+  position: absolute;
+  right: 248px;
+  top: 0;
+  z-index: 9999;
+}
+
+.sliding-menu-hidden, .sliding-menu, .sliding-menu:before {
+  -webkit-transition: 500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a.sliding-menu-button {
+  background: #fff;
+  color: #1a1a1a;
+  display: inline-block;
+  display: inline-block;
+  font-size: 1.23em;
+  font-size: 1em;
+  padding: 10px 24px;
+  position: absolute;
+  right: 24px;
+  text-decoration: none;
+  top: 24px;
+  white-space: nowrap;
+  width: 152px;
+}
+a.sliding-menu-button:hover {
+  background: #555;
+  color: #fff;
+}
+
+.sliding-menu-nav {
+  bottom: 24px;
+  font-size: 4.7em;
+  position: absolute;
+  right: 24px;
+  width: 200px;
+}
+.sliding-menu-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.sliding-menu-nav li {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+.sliding-menu-nav li a {
+  text-decoration: none;
+}
+
+#content {
+  -webkit-filter: blur(0);
+  -webkit-transition: 500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: #fff;
+  filter: blur(0);
+  padding: 24px;
+  padding-left: 272px;
+  transition: 500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sliding-menu-active #content {
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+}
+.sliding-menu-active .sliding-menu {
+  left: 0%;
+  margin-left: -248px;
+  margin-right: 0;
+  right: 0%;
+}
+.sliding-menu-active .sliding-menu:before {
+  left: 0;
+  padding: 0;
+  right: 0;
+}

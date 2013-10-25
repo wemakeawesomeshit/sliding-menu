@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+
+   /\___/\
+  ( o   o )
+  (  =^=  )
+  (        )
+  (         )
+  (          )))))))))))
+
+  e   e  e eeee    eeeeeee eeeee eeeee eeee    eeeee e   e e  eeeee
+  8   8  8 8       8  8  8 8   8 8   8 8         8   8   8 8  8   "
+  8e  8  8 8eee    8e 8  8 8eee8 8e  8 8eee      8e  8eee8 8e 8eeee
+  88  8  8 88      88 8  8 88  8 88  8 88        88  88  8 88    88
+  88ee8ee8 88ee    88 8  8 88  8 88ee8 88ee      88  88  8 88 8ee88
+
+-->
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Sliding Menu</title>
+
+    <link href='sliding-menu/css/sliding-menu.css' rel='stylesheet'>
+    <script src='sliding-menu/js/libs/jquery-1.7.1.min.js'></script>
+  </head>
+  <body>
+    <aside class='sliding-menu'>
+      <a href='#' class='sliding-menu-button'>Open sliding menu</a>
+      <nav class='sliding-menu-nav'>
+        <ul>
+          <li>
+            <a href='#' title=''>Link 1</a>
+          </li>
+          <li>
+            <a href='#' title=''>Link 2</a>
+          </li>
+          <li>
+            <a href='#' title=''>Link 3</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class='sliding-menu-hidden'>
+        <h1>Hidden Content</h1>
+        <p>This here is some hidden content</p>
+      </div>
+    </aside>
+    <div id='content'>
+      <h1>A Simple Sliding Menu</h1>
+      <p>A simple sliding menu used on the main <a href='http://wemakeawesomesh.it'>We Make Awesome Sh site</a>. It uses webkit filters to blur out the content under the menu when active</p>
+      
+      <h2>Download</h2>
+      <p><a href=''>Download the zip here</a></p>
+      <p><a href=''>View on github</a></p>
+      
+      <h2>Installation instructions</h2>
+      <h3>Include the css &amp; js files</h3>
+      <pre><code>
+  &lt;!-- include jquery --&gt;
+  &lt;script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
+
+  &lt;!-- include sliding-menu files --&gt;
+  &lt;script type="text/javascript"  src="sliding-menu/js/sliding-menu.js">&lt;/script&gt;
+  &lt;link   rel="stylesheet"        href="sliding-menu/css/sliding-menu.css"/&gt;
+      </code></pre>
+
+      <h3>Insert the content into your html page</h3>
+
+      <pre><code>
+  &lt;aside class='sliding-menu'&gt;
+    &lt;a href='#' class='sliding-menu-button'&gt;Open sliding menu&lt;/a&gt;
+    &lt;nav class='sliding-menu-nav'&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href='' title=''&gt;Link 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;!-- Insert more links here --&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    
+    &lt;div class='sliding-menu-hidden'&gt;
+      &lt;!-- Insert your hidden content here --&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+  &lt;div id='content'&gt;
+    &lt;!-- Insert your content here --&gt;
+  &lt;/div&gt;
+
+      </pre></code>
+
+    <p><a href='http://wemakeawesomesh.it'>We Made This</a></p>
+
+    </div>
+    
+
+
+    <script src='sliding-menu/js/sliding-menu.js'></script>
+    
+  </body>
+</html>
+

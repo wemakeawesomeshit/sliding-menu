@@ -1,0 +1,139 @@
+//@import "reset";
+@import "partials/fonts";
+
+$padding: 24px;
+$sidebar_width: 200px;
+
+body {
+  background:#fff;
+  color:#1a1a1a;
+  padding:0;
+}
+
+.sliding-menu {
+
+  background:#1a1a1a;
+  background:rgba(darken(#1a1a1a, 100%),0.90);
+  bottom:0;
+  font-family: 'BebasNeueRegular', sans-serif;
+  font-weight: normal;
+  left:-100%;
+  margin-right:-$sidebar_width - $padding*2;  
+  padding:$padding;
+  position:fixed;
+  right:100%;
+  text-transform: uppercase;
+  top:0;
+  z-index:999;
+
+  a {
+    color:#fff;
+    &:hover {
+      color:#555;
+    }
+  }
+  .block {
+    background-color:#fff;
+    color:#1a1a1a;
+    &:hover {
+      background-color:#1a1a1a;
+      color:#fff;
+
+    }
+  }
+}
+
+
+
+
+.sliding-menu-hidden {
+  bottom:0;
+  color:#fff;
+  left:$sidebar_width+$padding*2;
+  padding:$padding;
+  position:absolute;
+  right:$sidebar_width+$padding*2;
+  top:0;
+  z-index:9999;
+  
+}
+
+.sliding-menu-hidden, .sliding-menu, .sliding-menu:before {
+  -webkit-transition:500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition:500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+
+a.sliding-menu-button {
+  background:#fff;
+  color:#1a1a1a;
+  display:inline-block;
+  display:inline-block;
+  font-size:1.23em;
+  font-size:1em;
+  padding: 10px $padding;
+  position:absolute;
+  right:$padding;
+  text-decoration: none;
+  top:$padding;
+  white-space: nowrap;
+  width:$sidebar_width - $padding*2;
+  &:hover {
+    background: #555;
+    color:#fff;
+  }
+}
+
+
+.sliding-menu-nav {
+  bottom:$padding;
+  font-size:4.7em;
+  position:absolute;
+  right:$padding;
+  width:$sidebar_width;
+  ul {
+    margin:0;
+    padding:0;
+  }
+	li {
+    line-height:1em;
+		margin:0;
+		padding:0;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+
+#content {
+  -webkit-filter:blur(0);
+  -webkit-transition:500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background:#fff;
+  filter:blur(0);
+  padding: $padding;
+  padding-left:$sidebar_width + $padding * 2 + $padding;
+  transition:500ms all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.sliding-menu-active {
+  #content {
+    -webkit-filter:blur(6px);
+    filter:blur(6px);
+  }
+
+  .sliding-menu {
+    left:0%;
+    margin-left:-$sidebar_width - $padding*2;
+    margin-right:0;
+    right:0%;
+    &:before {
+      left:0;
+      padding:0;
+      right:0;
+    }
+  }
+}
+
